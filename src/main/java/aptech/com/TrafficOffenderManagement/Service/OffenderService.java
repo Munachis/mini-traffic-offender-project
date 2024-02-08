@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-public interface OffenderInterface {
+public interface OffenderService {
     public OffenderDTO createOffender(OffenderDTO offenderDTO);
     public List<Offender> getAllOffenders();
+    public OffenderDTO updateOffenders(OffenderDTO offenderDTO);
 
     ResponseEntity<String> deleteoffender(@PathVariable Integer id);
 }

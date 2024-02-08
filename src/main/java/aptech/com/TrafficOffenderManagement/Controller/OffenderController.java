@@ -1,11 +1,10 @@
 package aptech.com.TrafficOffenderManagement.Controller;
 
 import aptech.com.TrafficOffenderManagement.Model.Offender;
-import aptech.com.TrafficOffenderManagement.Service.impl.OffenderService;
+import aptech.com.TrafficOffenderManagement.Service.impl.OffenderServiceImpl;
 import aptech.com.TrafficOffenderManagement.dto.OffenderDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,9 +13,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/offenders")
 public class OffenderController {
-    private final OffenderService offenderService;
+    private final OffenderServiceImpl offenderService;
 
-    public OffenderController(OffenderService offenderService) {
+    public OffenderController(OffenderServiceImpl offenderService) {
         this.offenderService = offenderService;
     }
     @PostMapping

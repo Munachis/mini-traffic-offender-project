@@ -1,7 +1,7 @@
 package aptech.com.TrafficOffenderManagement.Service.impl;
 
 import aptech.com.TrafficOffenderManagement.Model.Offender;
-import aptech.com.TrafficOffenderManagement.Service.OffenderInterface;
+import aptech.com.TrafficOffenderManagement.Service.OffenderService;
 import aptech.com.TrafficOffenderManagement.dto.OffenderDTO;
 import aptech.com.TrafficOffenderManagement.him.OffenderRepo;
 import org.springframework.http.ResponseEntity;
@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 
 @Service
-public class OffenderService implements OffenderInterface {
+public class OffenderServiceImpl implements OffenderService {
     private final OffenderRepo offenderRepo;
 
-    public OffenderService(OffenderRepo offenderRepo) {
+    public OffenderServiceImpl(OffenderRepo offenderRepo) {
         this.offenderRepo = offenderRepo;
     }
 
